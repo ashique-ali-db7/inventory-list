@@ -58,18 +58,18 @@ function Add() {
         }
       }
     }
-  
-    dispatch(update_products({
-      products : formDatas
-     } ));
-     dispatch(
+
+    dispatch(
+      update_products({
+        products: formDatas,
+      })
+    );
+    dispatch(
       update_status({
         status: "List",
       })
     );
   };
-
-
 
   return (
     <div className="add-container me-auto ms-auto mt-5">
@@ -102,8 +102,8 @@ function Add() {
           </Col>
         </Row>
         {indents.map((elements) => {
-          let errorCode = elements + "code"
-          console.log(errorCode);
+          let errorCode = elements + "code";
+
           return (
             <Row key={elements}>
               <Col lg={4} md={4} xs={4}>
@@ -117,7 +117,9 @@ function Add() {
                     placeholder="code"
                   />
                   {errors.errorCode && (
-                    <span className="error-message">{errors.errorCode.message}</span>
+                    <span className="error-message">
+                      {errors.errorCode.message}
+                    </span>
                   )}
                 </Form.Group>
               </Col>
