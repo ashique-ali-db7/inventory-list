@@ -17,16 +17,17 @@ function List() {
           </tr>
         </thead>
         <tbody>
-          {data.map((elements, i) => {
-            return (
-              <tr key={i + 1}>
-                <td>{++i}</td>
-                <td>{elements.code}</td>
-                <td>{elements.name}</td>
-                <td>{elements.quantity}</td>
-              </tr>
-            );
-          })}
+          {data &&
+            data.map((elements, i) => {
+              return (
+                <tr key={i + 1}>
+                  <td>{++i}</td>
+                  <td>{elements.code}</td>
+                  <td>{elements.name}</td>
+                  <td>{elements.quantity}</td>
+                </tr>
+              );
+            })}
         </tbody>
       </Table>
     </div>

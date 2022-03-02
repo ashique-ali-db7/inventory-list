@@ -22,7 +22,6 @@ function Add() {
   };
   const numberSubmit = (e) => {
     e.preventDefault();
-
     setNumRows(number);
   };
   var indents = [];
@@ -74,13 +73,16 @@ function Add() {
   return (
     <div className="add-container me-auto ms-auto mt-5">
       <Form onSubmit={handleSubmit(onSubmit)}>
+        <div>
+          <h1>Add</h1>
+        </div>
         <Row>
           <Col lg={6} md={6} xs={12}>
             <Form.Group className="mb-2" controlId="exampleForm.ControlInput1">
               <Form.Control
                 type="number"
                 onChange={numberOfItems}
-                placeholder="Skills"
+                placeholder="Enter number"
               />
             </Form.Group>
           </Col>
